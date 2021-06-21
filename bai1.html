@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function mobile(pin,id,name){
+        this.pin = pin;
+        this.id = id;
+        this.name = name;
+        this.setMassage = function(massage){
+            this.massage = massage
+        }
+        this.getMassage = function(){
+            return this.massage
+        }
+        this.sendMessage = function(massage,mobile){
+            mobile.setMassage(massage)
+        }
+
+        this.ChecksatatusOnof= function (){
+            if(this.pin>0){
+                return true;
+            }else{
+                return false
+            }
+        }
+        this.turnOn= function (){
+            alert("Điện thoại đang bật")
+        }
+        this.turnOf= function (){
+            alert("Điện thoại đang tắt")
+        }
+
+        this.charge = function () {
+            alert("Xoac Pin" + this.pin++);
+        };
+
+        this.writeMessenger = function () {
+            prompt("This is a messenger");
+        };
+
+        this.massengerL = function () {
+            alert("massenger da gui");
+
+        };
+        this.seenMessenger= function (){
+            alert("tin nhắn đã xem")
+        }
+        this.afterUse = function () {
+            alert("Dung mot chuc nang :" + this.pin--);
+        }
+        this
+
+    };
+    let mobile1 = new mobile(3,2,3)
+    let iphone = new mobile(1,'iphone');
+    let android = new mobile(2,'android')
+    iphone.sendMessage('xin chào',android)
+    var message = android.setMassage()
+    console.log(message)
+
+    function main() {
+        mobile1.turnOf();
+    }
+
+    function main1() {
+        mobile1.turnOn();
+    }
+
+    function main2() {
+        mobile1.charge();
+    }
+
+    function main3() {
+        mobile1.writeMessenger();
+
+    }
+
+    function main4() {
+        mobile1.massengerL();
+    }
+    function main5(){
+        mobile1.seenMessenger()
+    }
+
+    function main6() {
+        mobile1.afterUse();
+
+    }
+
+</script>
+<h>Myphone</h>
+<table border="1">
+    <th>
+        <button type="button" onclick="main()">Tắt điện thoại</button>
+    </th>
+    <th>
+        <button type="button" onclick="main1()">Bật điện thoại</button>
+    </th>
+    <th>
+        <button type="button" onclick="main2()">Xạc điện thoại</button>
+    </th>
+    <th>
+        <button type="button" onclick="main3()">Soạn tin nhắn</button>
+    </th>
+    <th>
+        <button type="button" onclick="main4()">Tin nhắn đã gửi</button>
+    </th>
+    <th>
+        <button type="button" onclick="main5()">Tin nhắn đã xem</button>
+    </th>
+    <th>
+        <button type="button" onclick="main6()">Sau khi sử dụng 1 chức năng</button>
+    </th>
+
+
+</table>
+
+
+</body>
+</html>
